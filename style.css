@@ -117,7 +117,7 @@ article *{
 @media(prefers-color-scheme:dark){
   body{
     color:white;
-    background-color: black;
+    background-color: white;
   }
   header{
     background: linear-gradient(red,gold);
