@@ -72,6 +72,14 @@ function next(e){
   const next=parent.nextElementSibling;
   if(next){
     appear(next);
+  } else {
+    // If this is the last article, reset the story
+    setTimeout(() => {
+      reset();
+      loadData();
+      renderData(data);
+      appear(document.getElementById("article-1"));
+    }, 1000); // Small delay to let user see they reached the end
   }
 }
 
