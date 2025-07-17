@@ -4,7 +4,7 @@ const beginBtn=document.getElementById("beginBtn");
 const resetBtn=document.getElementById("resetBtn");
 
 beginBtn.addEventListener("click",init);
-resetBtn.addEventListener("Click",init);
+resetBtn.addEventListener("click",init);
 
 function loadData(){
     const data1={
@@ -69,8 +69,10 @@ function zoomOut(e){
 function next(e){
   const target=e.target;
   const parent=target.parentElement;
-  const next=parent.nextSibling;
-  appear(next);
+  const next=parent.nextElementSibling;
+  if(next){
+    appear(next);
+  }
 }
 
 function reset(){

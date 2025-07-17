@@ -117,10 +117,10 @@ article *{
 @media(prefers-color-scheme:dark){
   body{
     color:white;
-    background-color: white;
+    background-color: black;
   }
   header{
-    background: linear-gradient(red,gold;
+    background: linear-gradient(red,gold);
   }
   button{
     background-color: lightgreen;
