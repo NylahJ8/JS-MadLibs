@@ -2,3 +2,134 @@ html {
   height: 100%;
   width: 100%;
 }
+
+.noto-sans-egyptian-hieroglyphs-regular {
+  font-family: "Noto Sans Egyptian Hieroglyphs", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fascinate-regular {
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+}
+
+p{
+  background: linear-gradient(red, gold);
+  line-height: 2rem;
+  clear:both;
+  padding:1em;
+}
+
+button{
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding:1rem;
+  box-sizing: border-box;
+}
+
+article{
+  margin:2em;
+}
+
+header{
+  background: linear-gradient(gold, red);
+}
+
+header h1{
+  text-align: center;
+  margin:0;
+  padding:2rem;
+}
+
+.row{
+  display:flex;
+  flex-direction: column;
+}
+
+.col{
+  flex:12 1 min-content;
+}
+
+img{
+  width:50%;
+  margin:2em auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+br{
+  display: none;
+}
+
+button{
+  display: block;
+  margin:1rem auto;
+}
+
+div#resetBtnRow{
+  display: none;
+}
+
+#statusDisplay{
+  display: none;
+}
+
+article *{
+  display:none;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
+@media(min-width:650px){
+  img{
+    float:left;
+    margin:1rem;
+    width:auto;
+    box-sizing: border-box;
+  }
+  .row{
+    flex-direction: row;
+  }
+  article{
+    width:75%;
+    margin:1rem auto;
+    clear: both;
+  }
+  p{
+    clear:none;
+    width: 75%;
+    margin:1rem auto;
+    padding:.5rem;
+  }
+  p, img{
+    border-radius: 10px;
+  }
+
+}
+
+@media(prefers-color-scheme:dark){
+  body{
+    color:white;
+    background-color: white;
+  }
+  header{
+    background: linear-gradient(red,gold;
+  }
+  button{
+    background-color: lightgreen;
+  }
+
+}
+
+
+
+
+
+
