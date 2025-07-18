@@ -32,7 +32,7 @@ function createArticle(data){
   img.src=data.img;
   const p=document.createElement("p");
   p.textContent=data.content;
-  p.classList.add("fascinate-regular");
+  p.classList.add("Noto Sans Egyptian Hieroglyphs", sans-serif);
   p.addEventListener("mouseover",zoomIn);
   p.addEventListener("mouseout",zoomOut);
   const nextBtn=document.createElement("button");
