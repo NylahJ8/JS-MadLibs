@@ -52,13 +52,14 @@ function init(){
 
 function appear(element){
   const children = element.children;
-  for (const child of children) {
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
     child.style.display = "inline-block";
     child.style.opacity = "0";
+    child.style.transition = "opacity 1s ease-in-out";
     setTimeout(() => {
       child.style.opacity = "1";
-      child.style.transition = "opacity 1s ease-in-out";
-    }, 100); // Small delay to trigger animation
+    }, 100 + (i * 200)); // Stagger animations
   }
 }
 
@@ -85,6 +86,12 @@ function zoomOut(e){
 
 function next(e){
   const target=e.target;
+  
+  // Prevent rapid clicking
+  if(target.disabled) return;
+  target.disabled = true;
+  setTimeout(() => target.disabled = false, 1200);
+  
   const parent=target.parentElement;
   const next=parent.nextElementSibling;
   if(next){
