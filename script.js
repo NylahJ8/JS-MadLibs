@@ -51,12 +51,29 @@ function init(){
 }
 
 function appear(element){
-  const children=element.children;
-  for(const child of children){
-    child.style.opacity=1;
-    child.style.display="inline-block";
+  const children = element.children;
+  for (const child of children) {
+    child.style.display = "inline-block";
+    child.style.opacity = "0";
+    setTimeout(() => {
+      child.style.opacity = "1";
+      child.style.transition = "opacity 1s ease-in-out";
+    }, 100); // Small delay to trigger animation
   }
 }
+
+function disappear(element){
+  const children = element.children;
+  for (const child of children) {
+    child.style.opacity = "1";
+    setTimeout(() => {
+      child.style.opacity = "0";
+      child.style.transition = "opacity 1s ease-in-out";
+      child.style.display = "none";
+    }, 100); // Small delay to trigger animation
+  }
+}
+
 
 function zoomIn(e){
   e.target.style.fontSize="2em";
